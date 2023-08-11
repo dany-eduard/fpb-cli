@@ -45,8 +45,8 @@ Quiero expresar mi agradecimiento a la comunidad de código abierto por su contr
 
 ---
 
-**Autor**: Daniel Eduardo Almagro
-**Contacto**: danyeduard17@gmail.com
+**Autor**: Daniel Eduardo Almagro  
+**Contacto**: danyeduard17@gmail.com  
 **Licencia**: MIT
 
 ¡Espero que encuentres útil esta herramienta para respaldar tus recuerdos valiosos en Facebook!
