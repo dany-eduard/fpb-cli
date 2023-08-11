@@ -1,0 +1,34 @@
+{
+  "name": "fpb-cli",
+  "version": "1.0.0",
+  "description": "Una CLI personalizada construida con Node.js para hacer backup de fotos de Facebook",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "build": "babel src -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "fpb-cli": "src/app.js"
+  },
+  "keywords": [],
+  "author": "Daniel Eduardo Almagro <danyeduard17@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cli-table3": "^0.6.3",
+    "colorette": "^2.0.20",
+    "dotenv": "^16.1.4",
+    "exiftool-vendored": "^22.0.0",
+    "figlet": "^1.6.0",
+    "inquirer": "^9.2.9",
+    "open": "^9.1.0",
+    "ora": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^20.2.5",
+    "babel-cli": "^6.26.0"
+  }
+}

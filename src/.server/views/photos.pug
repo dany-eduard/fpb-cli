@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Tus fotos
+  body
+    h1 Tus fotos #{user.profile.first_name || user.profile.displayName}
+
+    div
+      b Filtrar fotos para eliminar
+
+    div
+      label(for='start-date') Fecha de inicio
+      input(type="date" id='start-date' name='start-calendar' value=`${Date.now()}`)
+
+      label(for='end-date') Fecha final
+      input(type="date" id='end-date' name='end-calendar' value=`${Date.now()}`)
+
+
+    each photo in photos
+      div
+        picture
+          img(src=photo.source alt=photo.id width='100')
+        div
+          a(href=photo.link target="_blank") Ver en Facebook
+        span Publicado en #{new Date(photo.created_time).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}

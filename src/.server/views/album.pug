@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Album #{album.name}
+  body
+    h1 Album #{album.name}
+    small Fecha de creación: #{new Date(album.created_time).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
+    each photo in album.photos.data
+      div
+        picture
+          img(src=photo.picture alt=photo.id)
+        div
+          a(href=photo.link target="_blank") Ver en Facebook
+        span Publicado en #{new Date(photo.created_time).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}

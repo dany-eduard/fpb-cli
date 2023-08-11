@@ -1,0 +1,26 @@
+html
+  head
+    title Mi Página Home
+    link(rel='stylesheet' href='/public/styles/home.css')
+  body
+    header
+      h1 ¡Bienvenido #{user.profile.first_name || user.profile.displayName}!
+      img(src=user.profile.picture.data.url)
+    main
+      section
+        h2 Tu Información Básica
+        ul
+          li Id: #{user.profile.id || ''}
+          li Nombre: #{user.profile.displayName}
+          li Email: #{user.profile.email || ''}
+      div
+        a(href=`/photos?accessToken=${user.accessToken}`) Ver mis fotos
+      section
+        h2 Tus álbumes
+        each album in user.profile.albums.data
+          .album
+            a(href=`/albums/${album.id}?accessToken=${user.accessToken}`)
+              h3= album.id
+            div
+              a(href=album.link target="_blank") Ver en Facebook
+            span Publicado en #{new Date(album.created_time).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
